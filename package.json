@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"bun run --filter=\"app-worker\" dev:worker\" \"bun run --filter=\"app-page\" dev:page\""
+  },
+  "workspaces": ["packages/*"],
+  "dependencies": {},
+  "devDependencies": {
+    "biome": "^0.3.3",
+    "concurrently": "^8.2.2",
+    "wrangler": "^3.60.3"
+  }
+}

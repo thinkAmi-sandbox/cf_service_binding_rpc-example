@@ -11,6 +11,9 @@ binding = "MY_WORKER"
 # serviceは app-workerのwrangler.tomlにある `name` と同じ名前にする必要がある
 service = "app-worker"
 
+[vars]
+BUN_VERSION = "1.1.12"
+
 # [vars]
 # MY_VAR = "my-variable"
 

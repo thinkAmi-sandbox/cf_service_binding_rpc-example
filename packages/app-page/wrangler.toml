@@ -6,10 +6,12 @@ pages_build_output_dir = "./dist"
 # ソースコードの中で参照する名前
 # hono的には c.env.MY_WORKER_SERVICE のように参照する
 binding = "MY_WORKER"
-#binding = "MY_WORKER_BINDING"
 
 # serviceは app-workerのwrangler.tomlにある `name` と同じ名前にする必要がある
 service = "app-worker"
+
+# Workersでexportされたクラス名を設定
+entrypoint = "MyWorkerEntrypoint"
 
 [vars]
 BUN_VERSION = "1.1.12"

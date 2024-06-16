@@ -13,14 +13,16 @@
 
 import { WorkerEntrypoint } from 'cloudflare:workers'
 
-export default class MyWorkerEntrypoint extends WorkerEntrypoint {
+export class MyWorkerEntrypoint extends WorkerEntrypoint {
   async hello() {
     // biome-ignore lint: debug
     console.log('called worker!')
-    return 'Hello my worker!'
+    return 'Hello my named export worker!'
   }
+}
 
-  fetch() {
-    return new Response('Hello World!')
-  }
+export default {
+  async fetch() {
+    return new Response('Hello Worker World!')
+  },
 }

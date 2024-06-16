@@ -6,7 +6,7 @@
   "workspaces": ["packages/*"],
   "dependencies": {},
   "devDependencies": {
-    "biome": "^0.3.3",
+    "@biomejs/biome": "1.8.1",
     "concurrently": "^8.2.2",
     "wrangler": "^3.60.3"
   }
